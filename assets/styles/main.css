@@ -23,3 +23,27 @@ body, h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255,255,255,0.05);
   height: 100%;
 }
+
+.home-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.home-message > h1 {
+  margin-top: -50px;
+  text-shadow: 2px 1px 2px #000;
+  color: rgba(255,255,255,0.8);
+  font-size: 4em;
+}
+
+.home-message > h3 {
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+  color: black;
+}
+
+hr.home-divider {
+  border: 1px outset orange;
+  box-shadow: 1px 1px 1px orange;
+  width: 100%;
+}
