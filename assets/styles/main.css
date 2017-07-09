@@ -8,6 +8,21 @@ body, h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+.topnav {
+  font-size: 16px;
+  background: black;
+}
+
+.topnav ul.navbar-nav li a:hover,
+.topnav ul.navbar-nav li a:focus{
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.topnav .navbar-brand:hover,
+.topnav .navbar-brand:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+
 .home-header {
   padding-top: 50px;
   text-align: center;
@@ -15,7 +30,7 @@ body, h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-size: 100% 98%;
+  background-size: 100% 99%;
   height: 100%;
 }
 
@@ -38,12 +53,31 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .home-message > h3 {
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
-  color: black;
+  font-size: 2em;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+  color: navy;
 }
 
 hr.home-divider {
   border: 1px outset orange;
   box-shadow: 1px 1px 1px orange;
   width: 100%;
+}
+
+.quote {
+  padding-top: 5%;
+  text-align:left;
+}
+
+.quote > q {
+  color: ivory;
+  text-shadow: 2px 1px 2px #000;
+  font-size: 2em;
+}
+
+div.author {
+  text-shadow: 2px 1px 2px #000;
+  color: dimgrey;
+  text-align: right;
+  font-size: 1.5em;
 }
