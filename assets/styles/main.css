@@ -1,7 +1,7 @@
-/* body, html {
+body, html {
   width: 100%;
   height: 100%
-} */
+}
 
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -82,7 +82,7 @@ div.author {
 }
 
 .about {
-  background-image: url('../imgs/Harbor.jpeg');
+  background-image: url('../imgs/harbor.jpeg');
   text-align: left;
   background-repeat: no-repeat;
   background-position: center center;
@@ -136,4 +136,20 @@ p.lead {
 
 .about span.name, span.nickname, span.job {
   color: gold;
+}
+
+.projects {
+  background-image: url('../imgs/projects.jpeg');
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  margin-bottom: 1px;
+}
+
+.bg-overlay3 {
+  background: rgba(255, 255, 255, 0.1);
+  height: 100%;
 }
