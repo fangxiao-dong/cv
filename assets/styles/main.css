@@ -100,7 +100,7 @@ div.author {
 h2.section-heading {
     margin-top: 100px;
     font-size: 3em;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.9);
     text-shadow: 2px 1px 2px #000;
 }
 
@@ -152,4 +152,79 @@ p.lead {
 .bg-overlay3 {
   background: rgba(255, 255, 255, 0.1);
   height: 100%;
+}
+
+#below-heading {
+  color: rgba(255,255,255,0.9);
+}
+
+#small-text {
+  color: white;
+}
+
+.project-item {
+  border: 1px outset rgba(255, 255, 255, 0.6);
+  margin: 0 0 15px;
+  right: 0;
+}
+
+.project-item:hover {
+  transition: 0.5s;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);
+}
+
+.project-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.project-desc {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0, 0.8);
+  text-align: center;
+  padding: 25px;
+}
+
+.project-desc h4 {
+  color: #fff;
+  text-transform: none;
+  margin: 0;
+}
+
+.project-desc p {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 13px;
+  margin: 0;
+}
+
+.project-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: #fff;
+  opacity: 0;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s,
+}
+
+.project-hover-content:hover {
+  opacity: 1;
+}
+
+.project-hover-content i {
+  margin: auto;
+  color: burlywood;
+}
+
+#portfolio * {
+  z-index: 2;
 }
