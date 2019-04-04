@@ -182,10 +182,9 @@ p.lead {
 
 .project-desc {
   max-width: 400px;
-  margin: 0 auto;
   background-color: rgba(0,0,0, 0.8);
   text-align: center;
-  padding: 25px;
+  padding: 20px 0 10px 0px;
 }
 
 .project-desc h4 {
@@ -201,28 +200,21 @@ p.lead {
   margin: 0;
 }
 
-.project-hover-content {
-  position: absolute;
+.project-desc i {
+  position: relative;
   width: 100%;
-  height: 20px;
-  font-size: 20px;
-  text-align: center;
-  top: 50%;
-  margin-top: -12px;
-  color: #fff;
+  height: 100%;
   opacity: 0;
   transition: all ease .5s;
   -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s,
-}
-
-.project-hover-content:hover {
-  opacity: 1;
-}
-
-.project-hover-content i {
-  margin: auto;
+  -moz-transition: all ease .5s;
+  opacity: 0;
   color: burlywood;
+  margin-top: 5px;
+}
+
+.project-desc i:hover {
+  opacity: 1;
 }
 
 #portfolio * {
