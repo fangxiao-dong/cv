@@ -182,7 +182,7 @@ p.lead {
 
 .project-desc {
   max-width: 400px;
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgba(0,0,0, 0.6);
   text-align: center;
   padding: 20px 0 10px 0px;
 }
@@ -219,4 +219,8 @@ p.lead {
 
 #portfolio * {
   z-index: 2;
+}
+
+#below-heading a {
+  color: red;
 }
