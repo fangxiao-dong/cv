@@ -224,3 +224,13 @@ p.lead {
 #below-heading a {
   color: red;
 }
+
+.contact {
+  background-image: url('../imgs/contact.jpeg');
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
