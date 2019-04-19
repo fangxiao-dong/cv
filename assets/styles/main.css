@@ -107,14 +107,14 @@ h2.section-heading {
 p.lead {
   text-shadow: 2px 1px 2px #000;
   color: ivory;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
 #skillset ul {
     padding-left: 10%;
     color: ivory;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-shadow: 2px 1px 2px #000;
 }
 
@@ -123,7 +123,7 @@ p.lead {
 }
 .skill-header a {
   color: gold;
-  font-size: 2em;
+  font-size: 1.8em;
   text-shadow: 2px 1px 2px #000;
 }
 
@@ -238,7 +238,7 @@ p.lead {
 
 .btn {
   display: inline-block;
-  color: #000;
+  color: black;
   border: 1px outset black;
   background: cornsilk;
   text-shadow: 1px 1px 1px rgba(0,0,0, 20);
