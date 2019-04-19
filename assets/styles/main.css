@@ -261,3 +261,15 @@ p.lead {
 ul.list-inline {
   padding-top: 10px;
 }
+
+@media(max-width: 767px) {
+  ul.list-inline > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  
+  ul.list-inline > li:last-child {
+    margin-bottom: 0;
+  }
+}
