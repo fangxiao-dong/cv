@@ -221,10 +221,6 @@ p.lead {
   z-index: 2;
 }
 
-#below-heading a {
-  color: red;
-}
-
 .contact {
   background-image: url('../imgs/contact.jpeg');
   text-align: center;
@@ -233,4 +229,35 @@ p.lead {
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
+}
+
+.bg-overlay4 {
+  background: rgba(255, 255, 255, 0.2);
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  color: #000;
+  border: 1px outset black;
+  background: cornsilk;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 20);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  color: #fff;
+  border: 1px outset rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0, 0.9);
+  transform: scale(1.1);
+  transition: 0.2s;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 20);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+}
+
+ul.list-inline {
+  padding-top: 10px;
 }
