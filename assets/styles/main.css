@@ -8,6 +8,10 @@ body, h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
 .topnav {
   font-size: 14px;
   background: black;
@@ -98,7 +102,7 @@ div.author {
 }
 
 h2.section-heading {
-    margin-top: 100px;
+    margin-top: 60px;
     font-size: 3em;
     color: rgba(255,255,255,0.9);
     text-shadow: 2px 1px 2px #000;
@@ -107,7 +111,7 @@ h2.section-heading {
 p.lead {
   text-shadow: 2px 1px 2px #000;
   color: ivory;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -121,9 +125,10 @@ p.lead {
 .skill-header {
   padding-bottom: 15px;
 }
+
 .skill-header a {
   color: gold;
-  font-size: 1.8em;
+  font-size: 1.3em;
   text-shadow: 2px 1px 2px #000;
 }
 
