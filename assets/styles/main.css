@@ -298,9 +298,8 @@ form {
 }
 
 .form-item {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
-  border-bottom: 1px solid black;
 }
 
 input, textarea {
@@ -314,22 +313,26 @@ input, textarea {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: none!important;
   resize: none;
-  width: 100%;
-  color: balck;
+  width: 80%;
+  color: black;
 }
 
-input:focus {
+input:focus, textarea:focus {
   outline: 0;
+}
+
+textarea {
+  height: 250px;
 }
 
 label {
   color: black;
-  display: block;
+  display: inline;
   z-index: 0;
   position: relative;
-  top: 2em;
   margin: 0;
-  font-size: 1em;
+  padding-right: 5px;
+  font-size: 1.3em;
   line-height: 1.764705882em;
   -webkit-transition: top .3s ease,opacity .3s ease;
   -moz-transition: top .3s ease,opacity .3s ease;
@@ -337,9 +340,6 @@ label {
   transition: top .3s ease,opacity .3s ease;
 }
 
-label:focus {
-  color: #722872;
-}
 
 ::placeholder {
   color:black;
@@ -353,5 +353,4 @@ label:focus {
 :-ms-input-placeholder {
   color: black;
 }
-
 
