@@ -234,7 +234,6 @@ p.lead {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  height: 100%;
 }
 
 .bg-overlay4 {
@@ -302,6 +301,10 @@ form {
   position: relative;
 }
 
+.form .form-item:last-of-type * {
+  vertical-align: middle;
+}
+
 input, textarea {
   z-index: 1;
   position: relative;
@@ -322,12 +325,14 @@ input:focus, textarea:focus {
 }
 
 textarea {
-  height: 250px;
+  height: 300px;
 }
 
 label {
-  color: black;
-  display: inline;
+  width: 100px;
+  text-align: right;
+  color: maroon;
+  font-weight: bolder;
   z-index: 0;
   position: relative;
   margin: 0;
@@ -352,5 +357,9 @@ label {
 
 :-ms-input-placeholder {
   color: black;
+}
+
+.form {
+  padding-bottom: 20%;
 }
 
