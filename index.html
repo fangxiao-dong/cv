@@ -223,18 +223,18 @@
               </div>
             </div>
             <div class="form">
-              <form id="contactForm" novalidate>
+              <form id="contactForm" novalidate class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxqWtQuxc50y2ox2Yy_zfcqQKkItlDFLm-QHkJa/exec">
                 <div class="form-item">
                   <label for="name">Name</label>
-                  <input id="name" type="text" required>
+                  <input id="name" name="name" type="text" required>
                 </div>
                 <div class="form-item">
                   <label for="email">Email</label>
-                  <input id="email" type="text" required>
+                  <input id="email" name="email" type="text" required>
                 </div>
                 <div class="form-item">
                   <label for="message">Message</label>
-                  <textarea id="message" type="text" required></textarea>
+                  <textarea id="message" name="message" type="text" required></textarea>
                 </div>
                 <br>
                 <button type="submit">Send</button>
