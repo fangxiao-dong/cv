@@ -40,8 +40,6 @@
         let form = event.target;
         let data = getFormData(form);
 
-        console.log(data);
-
         if (!data.name || !data.message || !data.email) {
             alert('Please complete the form before submitting.');
             return false;
@@ -62,18 +60,18 @@
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onreadystatechange = function() {
                 if (this.readyState === XMLHttpRequest.DONE) {
-                    console.log(xhr.status, xhr.statusText);
+                    console.log(xhr.status);
                     console.log(xhr.responseText);
 
                     form.reset();
-                    let formElements = form.querySelector('.form-elements');
+                    let formElements = document.querySelector('.form-elements');
                     if (formElements) {
                         formElements.style.display = 'none';
                     }
-                    let thankYouMessage = form.querySelector('.thankyou_message');
+                    let thankYouMessage = document.querySelector('.thankyou_message');
                     if (thankYouMessage) {
                         thankYouMessage.style.display = 'block';
-                    }
+                    }     
                 }         
             }
 

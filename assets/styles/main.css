@@ -363,3 +363,13 @@ label {
   padding-bottom: 20%;
 }
 
+.invalid-email {
+  color: red;
+  font-size: 1.3em;
+}
+
+.thankyou_message {
+  color: red;
+  padding-bottom: 80%;
+  font-size: 1.6em;
+}
