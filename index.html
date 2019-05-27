@@ -167,7 +167,7 @@
                 <a href="https://github.com/fangxiao-dong/cv" target="_blank" class="project-link">
                   <div class="project-desc">
                       <h4>My Web Profile</h4>
-                      <p id="small-text" class="text-muted">HTML5, CSS3 and Bootstrap</p>
+                      <p id="small-text" class="text-muted">HTML5/CSS3, Bootstrap, Font Awesome, JavaScript and Google Script</p>
                       <i class="fa fa-github fa-3x"></i>
                   </div>
                 </a>
@@ -189,7 +189,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h2 class="section-heading">Contact Me</Canvas></h2>
+                <h2 class="section-heading">Contact Me</h2>
               </div>
             </div>
             <div class="row">
@@ -215,12 +215,44 @@
                       </li>
                   </ul>
               </div>
-            </div>         
+            </div>
+            <hr class="contact-divider">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="or">Or, fill out the form below to reach out to me directly for any questions you might have.</p>
+              </div>
+            </div>
+
+            <div class="form form-elements">
+              <form id="contactForm" novalidate class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxqWtQuxc50y2ox2Yy_zfcqQKkItlDFLm-QHkJa/exec">
+                <div class="form-item">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" required>
+                </div>
+                <div class="form-item">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="text" required>
+                  <span class="invalid-email" style="display:none">Must be a valid email address</span>
+                </div>
+                <div class="form-item">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" type="text" required></textarea>
+                </div>
+                <br>
+                <button type="submit" class="submit">Send</button>
+              </form>
+            </div>
+
+            <div class="thankyou_message" style="display:none">
+              <h2><em>Thanks</em> for contacting me! I will get back to you soon!
+              </h2>
+            </div>
           </div>
         </div>
       </div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
     </body>
 </html>
