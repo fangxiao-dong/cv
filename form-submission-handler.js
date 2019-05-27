@@ -12,7 +12,26 @@
     }
 
     function getFormData(form) {
+        let elements = form.elements;
 
+        let fields = Object.keys(elements).map(key => {
+            if(elements[key].name !== undefined) {
+                return elements[key].name;
+            }
+            // special case for Edge's html collection
+            else if (elements[key].length > 0) {
+                return elements[key].item(0).name;
+            }
+        }).filter((item, pos, self) => {
+            return self.indexOf(item) === pos && item;
+        });
+
+        var formData = {};
+
+        fields.forEach(name => formData[name] = elements[name].value);
+
+        formData.formDataNameOrder = JSON.stringify(fields);
+        return formData;
     }
 
     function handleFormSubmit(event) {
@@ -21,8 +40,14 @@
         let form = event.target;
         let data = getFormData(form);
 
-        if (data.email && !validEmail(data.email)) {
-            let invalidEmail = form.querySelector('.email-invalid');
+        console.log(data);
+
+        if (!data.name || !data.message || !data.email) {
+            alert('Please complete the form before submitting.');
+            return false;
+        }
+        else if (!validEmail(data.email)) {
+            let invalidEmail = form.querySelector('.invalid-email');
 
             if (invalidEmail) {
                 invalidEmail.style.display = 'block';
