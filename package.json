@@ -1,0 +1,21 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Fangxiao's portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fangxiao-dong/cv.git"
+  },
+  "author": "Fisher Dong",
+  "bugs": {
+    "url": "https://github.com/fangxiao-dong/cv/issues"
+  },
+  "homepage": "https://github.com/fangxiao-dong/cv#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
