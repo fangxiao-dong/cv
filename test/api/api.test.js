@@ -2,6 +2,8 @@
 
 const test = require('ava');
 const request = require('request-promise');
+const fs = require('fs');
+const path = require('path');
 
 test('POST to Google Script API test', async t => {
     let options = {
@@ -33,4 +35,6 @@ test('POST to Google Script API test', async t => {
 
     result = await request(options);
     t.is(result.statusCode, 200);
+
+    t.is(result.body, fs.readFileSync(path.join(__dirname, '../fixtures/response.txt'), {encoding: 'utf8'}));
 });

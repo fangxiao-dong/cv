@@ -4,7 +4,8 @@
   "description": "Fangxiao's portfolio",
   "main": "index.html",
   "scripts": {
-    "test": "ava -v -c1 test/api/*.js"
+    "api-test": "ava -v -c1 test/api/*.js",
+    "browser-test": "exit 1"
   },
   "repository": {
     "type": "git",
