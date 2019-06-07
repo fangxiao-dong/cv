@@ -1,3 +1,6 @@
+| Build Status | Branch |
+| :------------: | :------: |
+| [![Build Status](https://travis-ci.org/fangxiao-dong/cv.svg?branch=master)](https://travis-ci.org/fangxiao-dong/cv) | master |
 # What is This
 Fangxiao's portfolio summarizing my work experience and skillsets.
 
