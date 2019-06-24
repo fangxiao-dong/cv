@@ -20,7 +20,7 @@ test('Alert is present when any required inputs are empty', async t => {
     await t.context.formPage.addInputs(t.context.formPage.message, 'This is the message from Selenium test.');
     await t.context.formPage.clickSend();
     try {
-        const contactAlert = await t.context.driver.wait(until.alertIsPresent());
+        const contactAlert = await t.context.driver.wait(until.alertIsPresent(), 15);
         t.pass("Alert is present.");
 
         const alertText = await contactAlert.getText();
@@ -35,11 +35,32 @@ test('Alert is present when any required inputs are empty', async t => {
 });
 
 test('Email validation hint is present when invalid email is input', async t => {
-    t.is(1,1);
+    await t.context.formPage.addInputs(t.context.formPage.name, 'API Tester');
+    await t.context.formPage.addInputs(t.context.formPage.message, 'This is the message from Selenium test.');
+    await t.context.formPage.addInputs(t.context.email, 'abc@@.com');
+    await t.context.formPage.clickSend();
+
+    t.true(await t.context.formPage.invalidEmail.isDisplayed(), 'Invalid email hint is displayed.');
+
+    t.is(await t.context.formPage.invalidEmail.getText(), 'Must be a valid email address');
 });
 
 test('Successfully send the contact form', async t => {
-    t.is(1,1);
+    await t.context.formPage.addInputs(t.context.formPage.name, 'Selenium Tester');
+    await t.context.formPage.addInputs(t.context.formPage.message, 'This is the message from Selenium test.');
+    await t.context.formPage.addInputs(t.context.email, 'seleniumtester@dummy.com');
+    await t.context.formPage.clickSend();
+
+    t.false(await t.context.formPage.invalidEmail.isDisplayed(), 'Invalid email hint is not displayed.');
+
+    try {
+        await t.context.driver.wait(until.elementIsVisible(t.context.formPage.thankYouMessage), 15);
+        t.pass('Thank you message appears.');
+    }
+    catch (e) {
+        t.fail('Thank you message does not appear.');
+    }
+    
 });
 
 test.after(async t => {
