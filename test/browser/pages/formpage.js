@@ -10,20 +10,20 @@ class FormPage {
         this.thankYouMessage = driverFindByCss('div.thankyou_message');
     }
 
-    clickSend() {
-        this.send.click();
+    async clickSend() {
+        await (await this.send).click();
     }
 
-    addInputs(elem, message) {
-        elem.sendKeys(message);
+    async addInputs(elem, message) {
+        await elem.sendKeys(message);
     }
 
-    invalidEmailDisplayed() {
-        this.invalidEmail.isDisplayed();
+    async invalidEmailDisplayed() {
+        await (await this.invalidEmail).isDisplayed();
     }
 
-    thankYouMessageDisplayed() {
-        this.thankYouMessage.isDisplayed();
+    async thankYouMessageDisplayed() {
+        await (await this.thankYouMessage).isDisplayed();
     }
 }
 
