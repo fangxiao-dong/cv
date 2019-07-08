@@ -3,7 +3,7 @@
 class FormPage {
     constructor(driverFindByCss) {
         this.name = driverFindByCss('input#name');
-        this.email = driverFindByCss('input#emial');
+        this.email = driverFindByCss('input#email');
         this.message = driverFindByCss('textarea#message');
         this.send = driverFindByCss('button.submit');
         this.invalidEmail = driverFindByCss('span.invalid-email');
@@ -15,7 +15,7 @@ class FormPage {
     }
 
     addInputs(elem, message) {
-        elem.sendText(message);
+        elem.sendKeys(message);
     }
 
     invalidEmailDisplayed() {
