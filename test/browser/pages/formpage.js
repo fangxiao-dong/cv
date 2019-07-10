@@ -19,11 +19,11 @@ class FormPage {
     }
 
     async invalidEmailDisplayed() {
-        await (await this.invalidEmail).isDisplayed();
+        return await (await this.invalidEmail).isDisplayed();
     }
 
     async thankYouMessageDisplayed() {
-        await (await this.thankYouMessage).isDisplayed();
+        return await (await this.thankYouMessage).isDisplayed();
     }
 }
 
