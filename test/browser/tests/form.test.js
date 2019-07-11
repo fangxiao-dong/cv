@@ -5,13 +5,10 @@ const webdriver = require('selenium-webdriver');
 const {until, By} = webdriver;
 const test = require('ava');
 
-test.before(async t => {
-    const driverFindByCss = async css => await t.context.driver.findElement(By.css(css));
-    t.context.driverFindByCss = driverFindByCss;
-});
-
 test.beforeEach(async t => {
     t.context.driver = await (new webdriver.Builder().forBrowser('chrome').build());
+    const driverFindByCss = async css => await t.context.driver.findElement(By.css(css));
+    t.context.driverFindByCss = driverFindByCss;
     await t.context.driver.get('http://127.0.0.1:8080#contact');
     t.context.formPage = new FormPage(t.context.driverFindByCss);
 });
@@ -63,5 +60,9 @@ test('Successfully send the contact form', async t => {
 });
 
 test.afterEach(async t => {
-    t.context.driver.quit();
+    await t.context.driver.close();
 });
+
+// test.after(async t => {
+//     await t.context.driver.quit();
+// });
