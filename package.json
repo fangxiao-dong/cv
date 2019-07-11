@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "api-test": "ava -v -c1 test/api/*.js",
-    "browser-test": "exit 1"
+    "start-server": "http-server &",
+    "browser-test": "npm run start-server && exit 1"
   },
   "repository": {
     "type": "git",
