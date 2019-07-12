@@ -21,7 +21,7 @@ test('Alert is present when any required inputs are empty', async t => {
     await t.context.formPage.addInputs(await t.context.formPage.message, 'This is the message from Selenium test.');
     await t.context.formPage.clickSend();
     try {
-        const contactAlert = await t.context.driver.wait(until.alertIsPresent(), 15);
+        const contactAlert = await t.context.driver.wait(until.alertIsPresent(), 5000);
         t.pass("Alert is present.");
 
         const alertText = await contactAlert.getText();
