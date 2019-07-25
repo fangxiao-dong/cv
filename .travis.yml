@@ -1,7 +1,17 @@
+os:
+  - "linux"
+dist: trusty
+addons:
+  chrome: stable
 language: node_js
 node_js:
   - "10"
+before_install:
+  - wget https://chromedriver.storage.googleapis.com/76.0.3809.25/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - ln -s ./chromedriver ~/bin/chromedriver
 install:
   - npm i
 script:
   - npm run api-test
+  - npm run browser-test
