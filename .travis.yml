@@ -12,8 +12,8 @@ before_install:
   - ln -s ./chromedriver ~/bin/chromedriver
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 install:
-  - npm run start-server
   - npm i
+  - npm run start-server
 script:
   - npm run api-test
   - npm run browser-test
