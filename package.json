@@ -6,7 +6,7 @@
   "scripts": {
     "api-test": "ava -v -c1 test/api/*.js",
     "start-server": "http-server &",
-    "browser-test": "npm run start-server && ava -sv test/browser/tests/form.test.js"
+    "browser-test": "ava -sv test/browser/tests/form.test.js"
   },
   "repository": {
     "type": "git",

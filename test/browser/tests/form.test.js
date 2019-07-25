@@ -7,7 +7,7 @@ const test = require('ava');
 const chrome = require('selenium-webdriver/chrome');
 
 test.before(async t => {
-    t.context.driver = await (new webdriver.Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless()).build());
+    t.context.driver = await (new webdriver.Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().addArguments('--no-sandbox', '--headless', '--disable-dev-shm-usage').headless()).build());
     const driverFindByCss = async css => await t.context.driver.findElement(By.css(css));
     t.context.driverFindByCss = driverFindByCss;
 });
