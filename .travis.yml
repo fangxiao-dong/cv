@@ -11,6 +11,7 @@ before_install:
   - unzip chromedriver_linux64.zip
   - ln -s ./chromedriver ~/bin/chromedriver
   - ./chromedriver --version
+  - ~/bin/chromedriver --version
 install:
   - npm i
   - npm run start-server
