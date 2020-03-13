@@ -10,7 +10,7 @@ test('POST to Google Script API test', async t => {
         simple: false,
         resolveWithFullResponse: true,
         method: 'POST',
-        uri: 'https://script.google.com/macros/s/AKfycbxqWtQuxc50y2ox2Yy_zfcqQKkItlDFLm-QHkJa/exec',
+        uri: 'https://script.google.com/macros/s/AKfycbxBXdSzz4BsTMJf24SBywsbAhcOtxxtzQfKpp2TadkWyE9PJDE/exec',
         headers: {
             'content-type': 'application/x-www-form-urlencoded'
         },
