@@ -9,7 +9,7 @@ node_js:
 before_install:
   - CHROME_VERSION=$(google-chrome --product-version)
   - echo ${CHROME_VERSION}
-  - wget https://chromedriver.storage.googleapis.com/81.0.4044.138/chromedriver_linux64.zip
+  - wget https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - ln -s $(pwd)/chromedriver ~/bin/chromedriver
 install:
